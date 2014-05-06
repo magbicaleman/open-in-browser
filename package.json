@@ -1,5 +1,5 @@
 {
-  "name": "Open in Broser",
+  "name": "open-in-browser",
   "main": "./lib/open-in-browser",
   "version": "0.0.2",
   "description": "Simple Package to open file in default Browser",
