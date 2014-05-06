@@ -1,0 +1,14 @@
+{
+  "name": "Open in Broser",
+  "main": "./lib/open-in-browser",
+  "version": "0.0.1",
+  "description": "Simple Package to open file in default Browser",
+  "activationEvents": ["open-in-browser:open"],
+  "repository": "https://github.com/atom/open-in-browser",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}

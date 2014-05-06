@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Open in Browser': 'open-in-browser:open'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Open in Browser'
+      'submenu': [
+        { 'label': 'Open In Browser', 'command': 'open-in-browser:open' }
+      ]
+    ]
+  }
+]
