@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "Simple Package to open file in default Browser",
   "activationEvents": ["open-in-browser:open"],
-  "repository": "https://github.com/magbicaleman/open-in-browser",
+  "repository": "https://github.com/magbicaleman/open-in-browser.git",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
