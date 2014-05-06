@@ -1,14 +1,15 @@
 {
   "name": "open-in-browser",
   "main": "./lib/open-in-browser",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Simple Package to open file in default Browser",
-  "activationEvents": ["open-in-browser:open"],
+  "activationEvents": [
+    "open-in-browser:open"
+  ],
   "repository": "https://github.com/magbicaleman/open-in-browser",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
