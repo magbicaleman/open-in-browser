@@ -6,7 +6,7 @@ and have a menu that will open the current file in your default program. That
 opens that extension. HTML files will open in your default browser or
 application.
 
-**V.2.0.1**
+**V.0.2.1**
 
 Now has Windows support thanks to [olinksoftware][1]
 
