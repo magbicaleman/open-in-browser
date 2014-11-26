@@ -2,6 +2,8 @@
 'context-menu':
   '.overlayer':
       'Open in Browser': 'open-in-browser:open'
+  '.tree-view .file':
+      'Open in Browser': 'open-in-browser:open-tree-view'
 
 'menu': [
   {
