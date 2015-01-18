@@ -6,12 +6,14 @@ and have a menu that will open the current file in your default program. That
 opens that extension. HTML files will open in your default browser or
 application.
 
-**V.0.3.0**
+**V.0.4.0**
 
-Now has Windows support thanks to [olinksoftware][1]
+Update by "MetaMemoryT"
 
-[1]: <https://github.com/olinksoftware>
+Now able to right click on tree-view and select "Open in browser"
 
- 
-If you would like to contribute please fork from develop branch and create a
-pull request into the develop branch. Thank you.
+Update by "mesosteros"
+
+Replace editor class with atom-text-editor tag.
+Shortcut was conflicting with meteor developers who use Ctrl-Alt-M in
+Meteor.js packages for Atom, so use Ctrl-Alt-Q instead.
