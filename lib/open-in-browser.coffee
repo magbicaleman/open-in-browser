@@ -3,6 +3,7 @@
 Shell = require('shell')
 
 module.exports =
+
   activate: (state) ->
     atom.workspaceView.command "open-in-browser:open", => @open()
     atom.workspaceView.command("open-in-browser:open-tree-view",

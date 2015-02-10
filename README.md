@@ -6,7 +6,12 @@ and have a menu that will open the current file in your default program. That
 opens that extension. HTML files will open in your default browser or
 application.
 
-**V.0.4.0**
+## v 0.4.1
+=========
+* Fixes "Open In Browser" not showing up in the workspace context menu
+
+## v 0.4.0
+==========
 
 Update by "MetaMemoryT"
 

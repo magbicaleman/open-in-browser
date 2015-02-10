@@ -1,6 +1,7 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
+
 'context-menu':
-  '.overlayer':
+  'atom-workspace':
       'Open in Browser': 'open-in-browser:open'
   '.tree-view .file':
       'Open in Browser': 'open-in-browser:open-tree-view'
