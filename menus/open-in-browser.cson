@@ -2,9 +2,9 @@
 
 'context-menu':
   'atom-workspace':
-      'Open in Browser': 'open-in-browser:open'
+    'Open in Browser': 'open-in-browser:open'
   '.tree-view .file':
-      'Open in Browser': 'open-in-browser:open-tree-view'
+    'Open in Browser': 'open-in-browser:open-tree-view'
 
 'menu': [
   {
