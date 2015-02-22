@@ -5,9 +5,9 @@ Shell = require('shell')
 module.exports =
 
   activate: (state) ->
-    atom.workspaceView.command "open-in-browser:open", => @open()
-    atom.workspaceView.command("open-in-browser:open-tree-view",
-      => @openTreeView())
+    atom.commands.add "atom-workspace", "open-in-browser:open", => @open()
+    atom.commands.add "atom-workspace", "open-in-browser:open-tree-view",
+      => @openTreeView()
 
   openTreeView: ->
     packageObj = null
