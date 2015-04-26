@@ -6,6 +6,11 @@ and have a menu that will open the current file in your default program. That
 opens that extension. HTML files will open in your default browser or
 application.
 
+## v 0.4.4
+==========
+* fixed deprecation of stylesheets folder
+  * by andya9
+
 ## v 0.4.3
 =========
 * Fixes deprecation warnings and some indentations
