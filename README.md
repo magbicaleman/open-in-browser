@@ -6,23 +6,29 @@ and have a menu that will open the current file in your default program. That
 opens that extension. HTML files will open in your default browser or
 application.
 
+## v 0.4.5
+* Had to apply fixes differently because the pull-request was using outdated version.
+* [fix deprecations](https://github.com/andya9/open-in-browser/commit/de3e796bd6f26e3e87c43ac56664b58f7558c93e)
+  * by @andya9
+
+
 ## v 0.4.4
-==========
-* fixed deprecation of stylesheets folder
-  * by andya9
+
+* [fixed deprecation of stylesheets folder](https://github.com/magbicaleman/open-in-browser/pull/14)
+  * by @andya9
 
 ## v 0.4.3
-=========
-* Fixes deprecation warnings and some indentations
-  * by zimme
+
+* [Fixes deprecation warnings and some indentations](https://github.com/magbicaleman/open-in-browser/pull/12)
+  * by @zimme
 
 
 ## v 0.4.2
-=========
+
 * Fixes "Open In Browser" not showing up in the workspace context menu
 
 ## v 0.4.0
-==========
+
 
 Update by "MetaMemoryT"
 
