@@ -6,6 +6,9 @@
   "activationCommands": {
     "atom-text-editor": [
       "open-in-browser:open"
+    ],
+    "atom-panel" : [
+      "open-in-browser:open-tree-view"
     ]
   },
   "repository": "https://github.com/magbicaleman/open-in-browser",
