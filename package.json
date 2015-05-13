@@ -1,13 +1,13 @@
 {
   "name": "open-in-browser",
   "main": "./lib/open-in-browser",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "Simple Package to open file in default Browser",
   "activationCommands": {
     "atom-text-editor": [
       "open-in-browser:open"
     ],
-    "atom-panel" : [
+    "atom-panel": [
       "open-in-browser:open-tree-view"
     ]
   },
