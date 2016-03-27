@@ -23,6 +23,10 @@ module.exports =
 
   openTreeView: ->
     packageObj = null
+    if atom.packages.isPackageLoaded('nuclide-file-tree') == true
+      nuclideFileTree = atom.packages.getLoadedPackage('nuclide-file-tree')
+      path = nuclideFileTree.contextMenuManager.activeElement?.getAttribute('data-path')
+      packageObj = selectedPath:path
     if atom.packages.isPackageLoaded('tree-view') == true
       treeView = atom.packages.getLoadedPackage('tree-view')
       treeView = require(treeView.mainModulePath)
