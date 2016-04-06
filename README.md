@@ -6,6 +6,13 @@ and have a menu that will open the current file in your default program. That
 opens that extension. HTML files will open in your default browser or
 application.
 
+## v 0.4.7
+* "Open In Browser" context menu, from tree view or text editor pane, should be
+  functional when nuclide package is installed
+* Should Fix
+ * [Not compatible with nuclide-file-tree :(](https://github.com/magbicaleman/open-in-browser/issues/29)
+ * by @aiboy
+
 ## v 0.4.6
 * "Open In Browser" context menu, from tree view or text editor pane, should be
   functional
