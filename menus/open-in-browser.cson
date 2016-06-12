@@ -1,17 +1,19 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
 
 'context-menu':
-  'atom-text-editor': [{label: 'Open in Browser', command: 'open-in-browser:open'}]
-  '.tree-view .file' : [{label: 'Open in Browser', command: 'open-in-browser:open-tree-view'}]
+  'atom-text-editor': [
+    label: 'Open in Browser', command: 'open-in-browser:open'
+  ]
+  '.tree-view .file': [
+    label: 'Open in Browser', command: 'open-in-browser:open-tree-view'
+  ]
 
-'menu': [
-  {
-    'label': 'Packages'
-    'submenu': [
-      'label': 'Open in Browser'
-      'submenu': [
-        { 'label': 'Open In Browser', 'command': 'open-in-browser:open' }
-      ]
+menu: [
+  label: 'Packages'
+  submenu: [
+    label: 'Open in Browser'
+    submenu: [
+      label: 'Open In Browser', command: 'open-in-browser:open'
     ]
-  }
+  ]
 ]
