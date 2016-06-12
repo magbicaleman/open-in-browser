@@ -3,6 +3,15 @@
   "main": "./lib/open-in-browser",
   "version": "0.4.7",
   "description": "Simple Package to open file in default Browser",
+  "repository": "https://github.com/magbicaleman/open-in-browser",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coffeelint": "^1.15.0"
+  },
   "activationCommands": {
     "atom-text-editor": [
       "open-in-browser:open"
@@ -10,11 +19,5 @@
     "atom-panel": [
       "open-in-browser:open-tree-view"
     ]
-  },
-  "repository": "https://github.com/magbicaleman/open-in-browser",
-  "license": "MIT",
-  "engines": {
-    "atom": ">0.50.0"
-  },
-  "dependencies": {}
+  }
 }
