@@ -1,6 +1,5 @@
 {CompositeDisposable} = require 'atom'
-{exec} = require('child_process')
-Shell = require('shell')
+opn = require 'opn'
 
 module.exports =
 
@@ -13,20 +12,9 @@ module.exports =
     @subscriptions.add atom.commands.add 'atom-panel', 'open-in-browser:open-tree-view': => @openTreeView()
 
   openPath: (filePath) ->
-    switch process.platform
-      when 'darwin' then exec "open '#{filePath}'", (error, stdout, stderr) ->
-        if (error)
-          atom.notifications.addError error.toString(), detail: error.stack or '', dismissable: true
-          console.error error
-          return
-        console.log "stderr: #{stderr}" if stderr
-      when 'linux' then exec "xdg-open '#{filePath}'", (error, stdout, stderr) ->
-        if (error)
-          atom.notifications.addError error.toString(), detail: error.stack or '', dismissable: true
-          console.error error
-          return
-        console.log "stderr: #{stderr}" if stderr
-      when 'win32' then Shell.openExternal "file:///#{filePath}"
+    opn(filePath).catch (error) ->
+      atom.notifications.addError error.toString(), detail: error.stack or '', dismissable: true
+      console.error error
 
   open: ->
     editor = atom.workspace.getActivePaneItem()
