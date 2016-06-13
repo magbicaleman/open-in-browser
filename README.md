@@ -48,6 +48,6 @@ Now able to right click on tree-view and select "Open in browser"
 
 Update by "mesosteros"
 
-Replace editor class with atom-text-editor tag.
-Shortcut was conflicting with meteor developers who use Ctrl-Alt-M in
-Meteor.js packages for Atom, so use Ctrl-Alt-Q instead.
+Replace editor class with `atom-text-editor` tag.
+Shortcut was conflicting with meteor developers who use <kbd>Ctrl-Alt-M</kbd> in
+Meteor.js packages for Atom, so use <kbd>Ctrl-Alt-Q</kbd> instead.
