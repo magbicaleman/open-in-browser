@@ -1,5 +1,10 @@
-Open in Browser Atom.io Package
-===============================
+# Open in Browser Atom.io Package
+
+[![Atom Package](https://img.shields.io/apm/v/open-in-browser.svg)](https://atom.io/packages/open-in-browser)
+[![Atom Package Downloads](https://img.shields.io/apm/dm/open-in-browser.svg)](https://atom.io/packages/open-in-browser)
+[![Build Status (Linux)](https://travis-ci.org/magbicaleman/open-in-browser.svg?branch=master)](https://travis-ci.org/magbicaleman/open-in-browser)
+<!-- [![Build Status (Windows)](https://ci.appveyor.com/api/projects/status/XXXXXXXXX?svg=true)](https://ci.appveyor.com/project/magbicaleman/open-in-browser) -->
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/magbicaleman/open-in-browser/blob/master/LICENSE.md)
 
 A very simple Open in Browser Atom.io Package. This allows you to right click
 and have a menu that will open the current file in your default program. That
