@@ -2,7 +2,7 @@
   "name": "open-in-browser",
   "main": "./lib/open-in-browser",
   "version": "0.4.7",
-  "description": "Simple Package to open file in default Browser",
+  "description": "Simple Package to open file in default application",
   "repository": "https://github.com/magbicaleman/open-in-browser",
   "license": "MIT",
   "engines": {
