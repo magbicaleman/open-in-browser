@@ -1,36 +1,26 @@
-{exec} = require('child_process')
-
-Shell = require('shell')
+{CompositeDisposable} = require 'atom'
+opn = require 'opn'
 
 module.exports =
 
-  activate: (state) ->
-    atom.commands.add 'atom-text-editor', 'open-in-browser:open': => @open()
-    atom.commands.add 'atom-panel', 'open-in-browser:open-tree-view' : => @openTreeView()
+  subscriptions: null
 
-  openPath: (filePath) ->
-    process_architecture = process.platform
-    switch process_architecture
-      when 'darwin' then exec ('open "'+filePath+'"')
-      when 'linux' then exec ('xdg-open "'+filePath+'"')
-      when 'win32' then Shell.openExternal('file:///'+filePath)
+  activate: ->
+    @subscriptions = new CompositeDisposable
 
-  open: ->
-    editor = atom.workspace.getActivePaneItem()
-    file = editor?.buffer.file
-    filePath = file?.path
-    @openPath filePath
+    @subscriptions.add atom.commands.add 'atom-text-editor', 'open-in-browser:open', @openEditor.bind(this)
+    @subscriptions.add atom.commands.add '.tree-view .file', 'open-in-browser:open-tree-view', @openTreeView.bind(this)
 
-  openTreeView: ->
-    packageObj = null
-    if atom.packages.isPackageLoaded('nuclide-file-tree') == true
-      nuclideFileTree = atom.packages.getLoadedPackage('nuclide-file-tree')
-      path = nuclideFileTree.contextMenuManager.activeElement?.getAttribute('data-path')
-      packageObj = selectedPath:path
-    if atom.packages.isPackageLoaded('tree-view') == true
-      treeView = atom.packages.getLoadedPackage('tree-view')
-      treeView = require(treeView.mainModulePath)
-      packageObj = treeView.serialize()
-    if typeof packageObj != 'undefined' && packageObj != null
-      if packageObj.selectedPath
-        @openPath packageObj.selectedPath
+  openEditor: ({target}) ->
+    @open target.getModel().getPath()
+
+  openTreeView: ({target}) ->
+    @open target.dataset.path
+
+  open: (filePath) ->
+    opn(filePath).catch (error) ->
+      atom.notifications.addError error.toString(), detail: error.stack or '', dismissable: true
+      console.error error
+
+  deactivate: ->
+    @subscriptions?.dispose()

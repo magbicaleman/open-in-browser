@@ -1,11 +1,8 @@
-# Keybindings require three things to be fully defined: A selector that is
-# matched against the focused element, the keystroke and the command to
-# execute.
-#
-# Below is a basic keybinding which registers on all platforms by applying to
-# the root workspace element.
+'.platform-win32 atom-workspace atom-text-editor':
+  'ctrl-shift-q': 'open-in-browser:open'
 
-# For more detailed documentation see
-# https://atom.io/docs/latest/advanced/keymaps
-'atom-text-editor':
-  'ctrl-alt-q': 'open-in-browser:open'
+'.platform-linux atom-workspace atom-text-editor':
+  'ctrl-shift-q': 'open-in-browser:open'
+
+'.platform-darwin atom-workspace atom-text-editor':
+  'cmd-shift-q': 'open-in-browser:open'
