@@ -8,8 +8,11 @@
 
 A very simple Open in Browser Atom.io Package. This allows you to right click
 and have a menu that will open the current file in your default program. That
-opens that extension. HTML files will open in your default browser or
-application.
+opens that extension. **Files will open in your default browser or
+application**.
+
+## v 0.5.0
+ - Huge thanks to [ldez](https://github.com/ldez) for the contributions on pull request [#34](https://github.com/magbicaleman/open-in-browser/pull/34) which solves a few issues some users were having.
 
 ## v 0.4.7
 * "Open In Browser" context menu, from tree view or text editor pane, should be
