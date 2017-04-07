@@ -14,6 +14,7 @@ build_script:
 branches:
   only:
     - master
+    - develop
 
 version: "{build}"
 platform: x64
