@@ -11,8 +11,9 @@ module.exports =
     @subscriptions.add atom.commands.add 'atom-text-editor', 'open-in-browser:open', @openEditor.bind(this)
     @subscriptions.add atom.commands.add '.tree-view .file', 'open-in-browser:open-tree-view', @openTreeView.bind(this)
 
-  openEditor: ({target}) ->
-    @open target.getModel().getPath()
+  openEditor: ({currentTarget}) ->
+    filePath = currentTarget.getModel().getPath()
+    @open filePath
 
   openTreeView: ({target}) ->
     @open target.dataset.path
