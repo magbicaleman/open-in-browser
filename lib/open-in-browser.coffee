@@ -7,14 +7,17 @@ module.exports =
 
   activate: ->
     @subscriptions = new CompositeDisposable
-    @subscriptions.add atom.commands.add 'atom-text-editor', 'open-in-browser:open', @openEditor.bind(this)
-    @subscriptions.add atom.commands.add '.tree-view .file', 'open-in-browser:open-tree-view', @openTreeView.bind(this)
+    @subscriptions.add atom.commands.add 'atom-text-editor',
+      'open-in-browser:open', @openEditor.bind(@)
+    @subscriptions.add atom.commands.add '.tree-view .file',
+      'open-in-browser:open-tree-view', @openTreeView.bind(@)
 
   getFilePath: -> atom.workspace.getActiveTextEditor().getPath()
+
   openEditor: ->
     @open @getFilePath()
 
-  openTreeView: ({target}) ->
+  openTreeView: ({ target }) ->
     @open target.dataset.path
 
   open: (filePath) ->
