@@ -5,4 +5,4 @@
   'ctrl-shift-q': 'open-in-browser:open'
 
 '.platform-darwin atom-workspace atom-text-editor':
-  'cmd-shift-q': 'open-in-browser:open'
+  'cmd-alt-b': 'open-in-browser:open'
