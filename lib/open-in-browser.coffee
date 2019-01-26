@@ -12,18 +12,28 @@ module.exports =
     @subscriptions.add atom.commands.add '.tree-view .file',
       'open-in-browser:open-tree-view', @openTreeView.bind(this)
 
-  getFilePath: -> atom.workspace.getActiveTextEditor().getPath()
+  getFilePath: ->
+    new Promise (resolve, reject) ->
+      if atom.workspace.hasActiveTextEditor
+        resolve atom.workspace.getActiveTextEditor().getPath()
+      else
+        reject Error 'Active pane item is not a text editor.'
 
   openEditor: ->
-    @open @getFilePath()
+    @getFilePath()
+      .then (result) =>
+        if result? then @open result else Error 'Path undefined for editor content. (Has it been saved?)'
+      .catch (error) => @report error
 
   openTreeView: ({target}) ->
     @open target.dataset.path
 
   open: (filePath) ->
-    opn(filePath).catch (error) ->
-      atom.notifications.addError error.toString(), detail: error.stack or '', dismissable: true
-      console.error error
+    opn(filePath)
+
+  report: (error) ->
+    atom.notifications.addError error.toString(), detail: error.stack or '', dismissable: true
+    console.error error
 
   deactivate: ->
     @subscriptions?.dispose()
