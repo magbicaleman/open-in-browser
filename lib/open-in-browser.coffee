@@ -21,7 +21,8 @@ module.exports =
 
   openEditor: ->
     @getFilePath()
-      .then (result) => @open result
+      .then (result) =>
+        if result? then @open result else Error 'Path undefined for editor content. (Has it been saved?)'
       .catch (error) => @report error
 
   openTreeView: ({target}) ->
