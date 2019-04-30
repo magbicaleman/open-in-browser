@@ -1,5 +1,5 @@
 {CompositeDisposable} = require 'atom'
-opn = require 'opn'
+opn = require 'open'
 
 module.exports =
 
